@@ -77,7 +77,11 @@ public class PlayerList  {
      */
     public synchronized Player get(String name) {
         Player player = new Player(name);
-        return list.get(list.indexOf(player));
+        int pos = list.indexOf(player);
+        if (pos >= 0)
+            return list.get(pos);
+        else
+            return null;
     }
 
     /**

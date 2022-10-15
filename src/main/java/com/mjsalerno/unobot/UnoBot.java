@@ -723,7 +723,11 @@ public class UnoBot extends ListenerAdapter {
             }
         } //SHOWCARDS
         else if ((tokens[0].equalsIgnoreCase(this.token + "showcards") || tokens[0].equalsIgnoreCase(this.token + "hand") || tokens[0].equalsIgnoreCase(this.token + "ca")) && delt) {
-            bot.sendIRC().notice(sender, getCards(players.get(sender)));
+            Player p = players.get(sender);
+            if (p != null)
+                bot.sendIRC().notice(sender, getCards(p));
+            else
+                bot.sendIRC().notice(sender, "It appears that you arent part of the game yet");
         } //RANK
         else if (tokens[0].equalsIgnoreCase(this.token + "rank")) {
             for (ScoreCard score : sb.getTop10()) {
