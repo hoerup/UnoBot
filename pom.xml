@@ -13,9 +13,9 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>org.pircbotx</groupId>
+                   <groupId>com.github.pircbotx</groupId>
             <artifactId>pircbotx</artifactId>
-            <version>2.2-SNAPSHOT</version>
+            <version>2.3.1</version>     
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -42,6 +42,18 @@
           <enabled>true</enabled>
         </snapshots>
       </repository>    
+                <repository>
+                        <id>jitpack.io</id>
+                        <url>https://jitpack.io</url>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>interval:1</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>interval:1</updatePolicy>
+      </snapshots>
+                </repository>        
     </repositories>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
